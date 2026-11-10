@@ -1,112 +1,56 @@
-<!doctype html>
-<html lang="en" data-root="">
-<head>
-<meta charset="utf-8">
+<!doctype html><html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>WoW Forever Guide: the 2004 strategy guide, read against WoW Forever</title>
-<meta name="description" content="A 2004 official strategy guide, read one page at a time against World of Warcraft: Forever. What the book said, what Blizzard has confirmed, and where each fact comes from.">
-<meta property="og:title" content="WoW Forever Guide">
-<meta property="og:description" content="A 2004 official strategy guide, read one page at a time against World of Warcraft: Forever. What the book said, what Blizzard has confirmed, and where each fact comes from.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://realworldbuilder.github.io/wowforeverguide/">
-<meta property="og:image" content="https://realworldbuilder.github.io/wowforeverguide/img/01-rambleon-intro.jpg">
-<meta name="twitter:card" content="summary_large_image">
+<title>WoW Forever Guide</title><meta name="description" content="every class, race, zone and change in WoW Forever. pick your main right.">
+<meta property="og:title" content="WoW Forever Guide"><meta property="og:description" content="every class, race, zone and change in WoW Forever. pick your main right.">
+<meta property="og:url" content="https://realworldbuilder.github.io/wowforeverguide/"><meta property="og:image" content="https://realworldbuilder.github.io/wowforeverguide/brand/avatar.jpg">
 <link rel="canonical" href="https://realworldbuilder.github.io/wowforeverguide/">
-<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-<meta name="theme-color" content="#0b0d14">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,500;0,600;0,700;1,700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/site.css">
-</head>
-<body>
-<a class="skip" href="#main">Skip to content</a>
-<header class="mast"><div class="wrap">
-  <a class="brand" href=""><img src="assets/favicon.svg" alt="" width="30" height="30">WoW Forever Guide</a>
-  <a class="chip" id="status" href="#road">Launch November 4</a>
-  <div class="search" role="search"><input id="q" type="search" placeholder="Search the guide" aria-label="Search the guide" autocomplete="off"><ul id="hits" hidden></ul></div>
-  <nav class="nav" aria-label="Main">
-    <a href="guide/">The Guide</a>
-    <a href="then-and-now/">Then &amp; Now</a>
-    <a href="guide/classes/">Classes</a>
-    <a href="factions/">Factions</a>
-    <a href="guide/gear/">Gear</a>
-    <a href="podcasts/">Podcasts</a>
-    <a href="#road">Road to Launch</a>
-    <a href="how-we-verify/">How We Verify</a>
-  </nav>
-</div></header>
-<main id="main"><div class="wrap">
+<meta name="theme-color" content="#0b0d14"><link rel="icon" href="brand/avatar.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"><style>
+@font-face{font-family:Goodmountain;src:url(brand/Goodmountain-Regular.woff2) format("woff2");font-display:swap}
+:root{--bg:#0b0d14;--panel:#141826;--panel2:#1b2032;--line:#2a3047;--text:#eef0f6;--muted:#9aa3b8;--gold:#f5c84c;--ink:#1d1606;
+--head:Goodmountain,Georgia,serif;--body:Inter,system-ui,-apple-system,"Segoe UI",sans-serif}
+*{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.5 var(--body)}
+a{color:inherit}img{display:block;max-width:100%}
+h1,h2,h3{font-family:var(--head);font-weight:400;line-height:1.05;margin:0}
+.muted{color:var(--muted)}
 
-<section class="hero">
-  <div>
-    <span class="eyebrow">The official strategy guide, read against WoW Forever</span>
-    <h1>2004 guide, 2026 game</h1>
-    <p class="lede">In 2004 a strategy guide was printed for a game that hadn't launched yet: 434 pages of advice, promises and a few confident mistakes. World of Warcraft: Forever goes back to that world, so we're reading the old book against the new game, one page at a time.</p>
-    <p class="links"><a class="btn" href="guide/">Start with the guide</a><a class="more" href="then-and-now/">See every then and now</a><a class="more" href="#choose">Choose for launch</a></p>
-    <div class="stats">
-      <span><b>15</b>then-and-now entries</span>
-      <span><b>15</b>chapters in the book</span>
-      <span><b>34</b>claims with a source</span>
-    </div>
-  </div>
-  <figure><img src="img/01-rambleon-intro.jpg" alt="Rambleon, a night elf hunter, your guide through the guide" width="750" height="1000"></figure>
-</section>
+main{max-width:480px;margin:0 auto;padding:40px 16px 48px}
+.top{text-align:center}
+.avatar{width:92px;height:92px;border-radius:50%;margin:0 auto 14px;border:3px solid var(--gold);box-shadow:0 0 0 4px var(--bg),0 0 0 5px var(--line)}
+.top h1{font-size:40px;color:var(--gold)}
+.handle{margin:6px 0 0;font-weight:600}
+.tag{margin:10px auto 0;max-width:34ch;color:var(--muted)}
+.btns{display:grid;gap:12px;margin-top:28px}
+.btn{display:block;text-decoration:none;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:14px 18px;transition:border-color .15s,transform .15s}
+.btn:hover{border-color:var(--gold);transform:translateY(-1px)}
+.btn b{display:block;font-size:17px}.btn span{display:block;font-size:14px;color:var(--muted)}
+.btn.primary{background:var(--gold);border-color:var(--gold);color:var(--ink)}.btn.primary span{color:#5c4a12}
+.signup{margin-top:28px;background:var(--panel2);border:1px solid var(--gold);border-radius:16px;padding:18px}
+.signup h2{font-size:26px;color:var(--gold)}.signup p{margin:6px 0 12px;font-size:14px}
+.row{display:flex;gap:8px}.row input{flex:1;min-width:0;font:inherit;padding:12px 14px;border-radius:10px;border:1px solid var(--line);background:var(--bg);color:var(--text)}
+.row button{font:600 16px var(--body);padding:12px 16px;border:0;border-radius:10px;background:var(--gold);color:var(--ink);cursor:pointer}
+.sec{margin-top:36px}.sec h2{font-size:26px;margin-bottom:12px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.post{text-decoration:none;background:var(--panel);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.post:hover{border-color:var(--gold)}
+.post img{aspect-ratio:4/5;width:100%;height:auto;object-fit:cover}
+.post p{margin:0;padding:8px 10px 10px;font-size:13px;line-height:1.35}.post small{display:block;color:var(--muted);margin-top:2px}
+.foot{margin-top:36px;text-align:center;font-size:14px}.foot a{color:var(--gold)}
+</style></head>
+<body><main>
+<header class="top"><img class="avatar" src="brand/avatar.jpg" alt="" width="92" height="92">
+<h1>WoW Forever Guide</h1>
+<p class="handle"><a href="https://www.instagram.com/wowforeverguide/">@wowforeverguide</a> <span class="muted">· 19.0k followers</span></p>
+<p class="tag">every class, race, zone and change in WoW Forever. pick your main right.</p></header>
 
-<section class="panel">
-  <header><h2>Start here</h2><small><span class="badge v-wrong">The guide was wrong</span></small></header>
-  <div class="feature">
-    <a href="then-and-now/orc-warriors/"><img src="img/03-orc-warrior.jpg" alt="An orc warrior in plate armor, a character the 2004 guide says cannot exist"></a>
-    <div class="pad">
-      <span class="eyebrow">Chapter II &middot; Learning Your Place in the World</span>
-      <h2><a href="then-and-now/orc-warriors/">The guide says orcs can&#x27;t be warriors</a></h2>
-      <div class="split"><div class="then"><h3>2004 said</h3><p>Every Horde race has warriors except the orcs, whose ranks were &quot;depleted&quot; by war.</p></div><div class="now"><h3>Forever says</h3><p>Orc warriors are playable, as they were on the first day of the original game.</p></div></div>
-      <a class="more" href="then-and-now/orc-warriors/">Read the entry</a>
-    </div>
-  </div>
-</section>
-
-<section id="choose">
-  <h2 style="margin-bottom:14px">Choosing for launch</h2>
-  <p class="lede" style="margin-bottom:16px">Looking ahead rather than back: the two factions and the nine classes as they stand in Forever, from what Blizzard has confirmed.</p>
-  <ul class="cards"><li><a class="card f-alliance" href="factions/alliance/"><img src="img/09-dwarf-tips.jpg" alt="" loading="lazy"><div><b>The Alliance in Forever</b><p>Four old nations and one new arrival. In Forever the Alliance can field all nine classes for the first time, because dwarves can now be shaman.</p></div></a></li><li><a class="card f-horde" href="factions/horde/"><img src="img/07-troll-battleground.jpg" alt="" loading="lazy"><div><b>The Horde in Forever</b><p>Four old nations and one new arrival. In Forever the Horde can field all nine classes for the first time, because the undead can now be paladins.</p></div></a></li></ul>
-  <div style="margin-top:14px"><ul class="classes"><li><a class="c-druid" href="guide/classes/druid/">Druid<small>4 race choices</small></a></li><li><a class="c-hunter" href="guide/classes/hunter/">Hunter<small>8 race choices</small></a></li><li><a class="c-mage" href="guide/classes/mage/">Mage<small>6 race choices</small></a></li><li><a class="c-paladin" href="guide/classes/paladin/">Paladin<small>3 race choices</small></a></li><li><a class="c-priest" href="guide/classes/priest/">Priest<small>6 race choices</small></a></li><li><a class="c-rogue" href="guide/classes/rogue/">Rogue<small>9 race choices</small></a></li><li><a class="c-shaman" href="guide/classes/shaman/">Shaman<small>5 race choices</small></a></li><li><a class="c-warlock" href="guide/classes/warlock/">Warlock<small>5 race choices</small></a></li><li><a class="c-warrior" href="guide/classes/warrior/">Warrior<small>10 race choices</small></a></li></ul></div>
-  <p style="margin-top:14px"><a class="more" href="guide/gear/">What each class wears and wields</a></p>
-</section>
-
-<section class="panel">
-  <header><h2>The verdicts so far</h2><small>Each one opens its entry, with sources</small></header>
-  <ul class="rows"><li><a href="then-and-now/human-hunters/"><img src="img/02-human-hunter.jpg" alt="" loading="lazy"><span><span class="badge v-changed">Changed in Forever</span><b>Human hunters and five other firsts</b></span></a></li><li><a href="then-and-now/undead-paladins/"><img src="img/04-undead-paladin.jpg" alt="" loading="lazy"><span><span class="badge v-changed">Changed in Forever</span><b>The undead find the Light</b></span></a></li><li><a href="then-and-now/mount-prices/"><img src="img/05-tauren-mount-price.jpg" alt="" loading="lazy"><span><span class="badge v-changed">Changed in Forever</span><b>A mount cost 100 gold in 2004</b></span></a></li><li><a href="then-and-now/getting-around/"><img src="img/15-orc-mage-travel.jpg" alt="" loading="lazy"><span><span class="badge v-holds">Still holds</span><b>Getting around: no flying, then or now</b></span></a></li><li><a href="then-and-now/pet-happiness/"><img src="img/06-rambleon-pet.jpg" alt="" loading="lazy"><span><span class="badge v-testing">Testing in beta</span><b>Pets never stop eating</b></span></a></li><li><a href="then-and-now/three-bags/"><img src="img/12-rambleon-bags.jpg" alt="" loading="lazy"><span><span class="badge v-testing">Testing in beta</span><b>Three bags, feeding two</b></span></a></li><li><a href="then-and-now/hunter-then-and-now/"><img src="img/13-rambleon-attack.jpg" alt="" loading="lazy"><span><span class="badge v-changed">Changed in Forever</span><b>Hunter, then and now</b></span></a></li><li><a href="then-and-now/battlegrounds/"><img src="img/07-troll-battleground.jpg" alt="" loading="lazy"><span><span class="badge v-wrong">The guide was wrong</span><b>Battlegrounds, as imagined in 2004</b></span></a></li><li><a href="then-and-now/seventeen-dungeons/"><img src="img/11-dwarf-shaman-dungeon.jpg" alt="" loading="lazy"><span><span class="badge v-changed">Changed in Forever</span><b>Seventeen dungeons. That was the whole list.</b></span></a></li><li><a href="then-and-now/the-raid-interview/"><img src="img/10-druid-raid.jpg" alt="" loading="lazy"><span><span class="badge v-changed">Changed in Forever</span><b>&quot;That&#x27;s a secret ;)&quot;</b></span></a></li><li><a href="then-and-now/twenty-things/"><img src="img/08-gnome-murlocs.jpg" alt="" loading="lazy"><span><span class="badge v-holds">Still holds</span><b>#13: murlocs are evil</b></span></a></li><li><a href="then-and-now/advice-that-still-works/"><img src="img/09-dwarf-tips.jpg" alt="" loading="lazy"><span><span class="badge v-holds">Still holds</span><b>Five tips from 2004 that still work</b></span></a></li><li><a href="then-and-now/etiquette/"><img src="img/14-tauren-etiquette.jpg" alt="" loading="lazy"><span><span class="badge v-holds">Still holds</span><b>Don&#x27;t call the tauren cows</b></span></a></li><li><a href="then-and-now/chat-acronyms/"><img src="img/17-gnome-warrior-acronyms.jpg" alt="" loading="lazy"><span><span class="badge v-holds">Still holds</span><b>The glossary saw the acronyms coming</b></span></a></li></ul>
-</section>
-
-<section class="panel">
-  <header><h2>Six combinations 2004 never offered</h2><small><span class="badge t-confirmed">Confirmed</span> &nbsp;<a href="https://news.blizzard.com/en-us/article/24303313/world-of-warcraft-forever-deep-dive-panel-recap">Blizzard: Deep Dive panel recap</a></small></header>
-  <div class="pad"><div class="combos"><a class="combo" href="then-and-now/human-hunters/"><img src="img/02-human-hunter.jpg" alt="Human Hunter" loading="lazy"><span><small>New in Forever</small>Human Hunter</span></a><a class="combo" href="then-and-now/undead-paladins/"><img src="img/04-undead-paladin.jpg" alt="Undead Paladin" loading="lazy"><span><small>New in Forever</small>Undead Paladin</span></a><a class="combo" href="then-and-now/seventeen-dungeons/"><img src="img/11b-dwarf-shaman-dungeon-portrait.jpg" alt="Dwarf Shaman" loading="lazy"><span><small>New in Forever</small>Dwarf Shaman</span></a><a class="combo" href="then-and-now/getting-around/"><img src="img/15-orc-mage-travel.jpg" alt="Orc Mage" loading="lazy"><span><small>New in Forever</small>Orc Mage</span></a><div class="combo blank"><span><small>New in Forever</small>Gnome Priest</span></div><div class="combo blank"><span><small>New in Forever</small>Troll Warlock</span></div></div></div>
-</section>
-
-<section class="panel" id="road">
-  <header><h2>Road to launch</h2><small>Last checked October 5, 2026. Dates can change; Blizzard's posts are linked.</small></header>
-  <ol class="road"><li data-start="2026-09-12"><span class="when">Sep 12</span><div><b>Announced at BlizzCon</b><p>A new, permanent version of World of Warcraft alongside the modern game and Classic.</p></div><div class="src"><span class="badge t-reported">Reported</span><span class="muted">Press coverage of BlizzCon</span></div></li><li data-start="2026-09-17"><span class="when">Sep 17</span><div><b>Beta opens</b><p>The level cap starts at 20.</p></div><div class="src"><span class="badge t-confirmed">Confirmed</span><a href="https://news.blizzard.com/en-us/article/24304160/the-world-of-warcraft-forever-beta-now-live">Blizzard: the beta is now live</a></div></li><li data-start="2026-10-01"><span class="when">Oct 1</span><div><b>Beta level cap rises to 30</b></div><div class="src"><span class="badge t-confirmed">Confirmed</span><a href="https://us.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes-%E2%80%93-updated-october-1/2360696/4">Blizzard forums: beta development notes, October 1</a></div></li><li data-start="2026-10-21"><span class="when">Oct 21</span><div><b>Last full day of beta</b><p>After this there is a gap of about two weeks with no beta and no live game.</p></div><div class="src"><span class="badge t-confirmed">Confirmed</span><a href="https://news.blizzard.com/en-us/article/24304160/the-world-of-warcraft-forever-beta-now-live">Blizzard: the beta is now live</a></div></li><li data-start="2026-10-27"><span class="when">Oct 27 to Nov 3</span><div><b>Early name reservation</b><p>For eligible upgrade purchases. Blizzard&#x27;s post does not say which purchases are eligible.</p></div><div class="src"><span class="badge t-confirmed">Confirmed</span><a href="https://news.blizzard.com/en-us/article/24304161/create-a-name-of-your-own-in-wow-forever">Blizzard: Create a Name of Your Own in WoW Forever</a></div></li><li data-start="2026-11-04"><span class="when">Nov 4, 3:00 p.m. PST</span><div><b>Launch</b><p>Included with a World of Warcraft subscription or game time.</p></div><div class="src"><span class="badge t-confirmed">Confirmed</span><a href="https://news.blizzard.com/en-us/article/24303862/world-of-warcraft-forever-whats-next-panel-recap">Blizzard: What&#x27;s Next panel recap</a></div></li><li data-start="2026-12-09"><span class="when">Dec 9</span><div><b>First raids open</b><p>Barrow Deeps for 10 players and Hyjal Summit for 20.</p></div><div class="src"><span class="badge t-confirmed">Confirmed</span><a href="https://news.blizzard.com/en-us/article/24303862/world-of-warcraft-forever-whats-next-panel-recap">Blizzard: What&#x27;s Next panel recap</a></div></li><li data-start=""><span class="when">No date yet</span><div><b>Hardcore ruleset, more raids and dungeons</b><p>Announced without dates.</p></div><div class="src"><span class="badge t-confirmed">Confirmed</span><a href="https://news.blizzard.com/en-us/article/24303862/world-of-warcraft-forever-whats-next-panel-recap">Blizzard: What&#x27;s Next panel recap</a></div></li></ol>
-</section>
-
-<section>
-  <h2 style="margin-bottom:14px">The guide, chapter by chapter</h2>
-  <p class="lede" style="margin-bottom:16px">We follow the book's own order. Chapters fill in as we read them.</p>
-  <ul class="chapters"><li><a href="guide/introduction-to-mmorpgs/"><span class="plate">I</span><span><b>An Introduction to MMORPGs</b><small class="has">4 entries</small></span></a></li><li><a href="guide/learning-your-place/"><span class="plate">II</span><span><b>Learning Your Place in the World</b><small class="has">2 entries</small></span></a></li><li><a href="guide/your-first-day/"><span class="plate">III</span><span><b>Your First Day</b><small>Not read yet</small></span></a></li><li><a href="guide/joining-the-troops/"><span class="plate">IV</span><span><b>Joining the Troops</b><small class="has">3 entries</small></span></a></li><li><a href="guide/classes/"><span class="plate">V</span><span><b>Rising in the Ranks</b><small class="has">4 entries</small></span></a></li><li><a href="guide/the-finest-tools/"><span class="plate">VI</span><span><b>The Finest Tools</b><small>Not read yet</small></span></a></li><li><a href="guide/raids/"><span class="plate">VII</span><span><b>Raids</b><small class="has">1 entry</small></span></a></li><li><a href="guide/to-the-battle/"><span class="plate">VIII</span><span><b>To the Battle</b><small class="has">1 entry</small></span></a></li><li><a href="guide/crafting-and-professions/"><span class="plate">IX</span><span><b>Crafting &amp; Professions</b><small>Not read yet</small></span></a></li><li><a href="guide/guilds/"><span class="plate">X</span><span><b>Guilds</b><small>Not read yet</small></span></a></li><li><a href="guide/the-world-of-azeroth/"><span class="plate">XI</span><span><b>The World of Azeroth</b><small>Not read yet</small></span></a></li><li><a href="guide/equipment-tables/"><span class="plate">XII</span><span><b>Equipment Tables</b><small>Not read yet</small></span></a></li><li><a href="guide/items-and-consumables/"><span class="plate">XIII</span><span><b>Items &amp; Consumables</b><small>Not read yet</small></span></a></li><li><a href="guide/bestiary/"><span class="plate">XIV</span><span><b>Bestiary</b><small>Not read yet</small></span></a></li><li><a href="guide/pet-shop/"><span class="plate">XV</span><span><b>Pet Shop</b><small>Not read yet</small></span></a></li></ul>
-</section>
-
-</div></main>
-<footer class="foot"><div class="wrap">
-  <div>
-    <p><b>WoW Forever Guide</b> is one player's 2004 strategy guide, read a page at a time against World of Warcraft: Forever, with a look ahead at the classes and factions you'll choose between at launch. Facts last checked October 5, 2026.</p>
-    <p>An unofficial fan project. Not affiliated with Blizzard Entertainment or BradyGames, or with any other fan site of a similar name. World of Warcraft is a trademark of Blizzard Entertainment. The book belongs to BradyGames and Blizzard. When we show a page or quote it, that's so we can talk about it.</p>
-  </div>
-  <nav aria-label="Follow">
-    <a href="https://www.instagram.com/wowforeverguide/">Instagram @wowforeverguide</a>
-    <a href="https://x.com/cowboykaizen">X @cowboykaizen</a>
-    <a href="how-we-verify/">How we verify</a>
-  </nav>
-</div></footer>
-<script src="assets/site.js"></script>
-</body>
-</html>
+<nav class="btns" aria-label="Links"><a class="btn primary" href="https://discord.gg/6YrMpnv56"><b>join the Discord</b><span>class channels, guild night, every guide filed by class</span></a>
+<a class="btn" href="https://www.youtube.com/@wowforeveronline"><b>watch on YouTube</b><span>@wowforeveronline</span></a>
+<a class="btn" href="https://fortheguild.etsy.com"><b>class caps from ForTheGuild</b><span>warrior, rogue, druid, hunter</span></a>
+<a class="btn" href="https://realworldbuilder.github.io/midnight-riders/gifts/"><b>the WoW gift guide</b><span>sixteen gifts, priced like loot</span></a></nav>
+<section class="sec"><h2>most saved</h2><div class="grid"><a class="post" href="https://www.instagram.com/p/DfYyw0DDhu1/"><img src="brand/thumbs/ig246.jpg" alt="" loading="lazy" width="600" height="750"><p>every horde zone, 1 to 60<small>12.8k saves</small></p></a>
+<a class="post" href="https://www.instagram.com/p/DfaEBuqFryJ/"><img src="brand/thumbs/ig245.jpg" alt="" loading="lazy" width="600" height="750"><p>every alliance zone, 1 to 60<small>6.9k saves</small></p></a>
+<a class="post" href="https://www.instagram.com/p/Dff5tB0jsnK/"><img src="brand/thumbs/ig257.jpg" alt="" loading="lazy" width="600" height="750"><p>the rare pets everyone is camping<small>6.8k saves</small></p></a>
+<a class="post" href="https://www.instagram.com/p/DfFXboplmC-/"><img src="brand/thumbs/ig192.jpg" alt="" loading="lazy" width="600" height="750"><p>every rotation in three letters<small>6.0k saves</small></p></a></div></section>
+<p class="foot muted">brands and collabs: <a href="media-kit/">media kit</a></p>
+</main></body></html>
