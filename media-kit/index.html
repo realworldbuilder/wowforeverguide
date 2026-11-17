@@ -5,7 +5,7 @@
 <meta property="og:url" content="https://realworldbuilder.github.io/wowforeverguide/media-kit/"><meta property="og:image" content="https://realworldbuilder.github.io/wowforeverguide/brand/avatar.jpg">
 <link rel="canonical" href="https://realworldbuilder.github.io/wowforeverguide/media-kit/"><meta name="robots" content="noindex">
 <meta name="theme-color" content="#0b0d14"><link rel="icon" href="../brand/avatar.jpg">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"><style>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"><style>
 @font-face{font-family:Goodmountain;src:url(../brand/Goodmountain-Regular.woff2) format("woff2");font-display:swap}
 :root{--bg:#0b0d14;--panel:#141826;--panel2:#1b2032;--line:#2a3047;--text:#eef0f6;--muted:#9aa3b8;--gold:#f5c84c;--ink:#1d1606;
 --head:Goodmountain,Georgia,serif;--body:Inter,system-ui,-apple-system,"Segoe UI",sans-serif}
@@ -15,74 +15,207 @@ a{color:inherit}img{display:block;max-width:100%}
 h1,h2,h3{font-family:var(--head);font-weight:400;line-height:1.05;margin:0}
 .muted{color:var(--muted)}
 
-main{max-width:960px;margin:0 auto;padding:40px 16px 56px}
-.hero{display:flex;gap:20px;align-items:center}
-.avatar{width:96px;height:96px;border-radius:50%;border:3px solid var(--gold);flex:none}
-.hero h1{font-size:clamp(40px,7vw,64px);color:var(--gold)}
-.hero p{margin:4px 0 0;color:var(--muted)}.hero p b{color:var(--text)}
-.lede{font-size:19px;max-width:62ch;margin:28px 0 0}
-h2{font-size:34px;margin:52px 0 6px;color:var(--gold)}
-.note{margin:0 0 18px;color:var(--muted);font-size:14px}
-.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:32px}
-.stat{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px}
-.stat b{display:block;font:400 40px/1 var(--head);color:var(--text)}
-.stat span{display:block;margin-top:6px;font-size:14px;color:var(--muted)}
-.cols{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
-.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px}
-.card h3{font:600 15px var(--body);margin-bottom:12px}
-.bar{display:grid;grid-template-columns:7.5em 1fr 3em;gap:8px;align-items:center;font-size:14px;margin:7px 0}
-.bar i{display:block;height:8px;border-radius:4px;background:var(--panel2);overflow:hidden}
-.bar i em{display:block;height:100%;background:var(--gold);border-radius:4px}
-.bar span:last-child{text-align:right;font-variant-numeric:tabular-nums}
-.posts{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
-.post{text-decoration:none;background:var(--panel);border:1px solid var(--line);border-radius:12px;overflow:hidden}
-.post img{aspect-ratio:4/5;width:100%;height:auto;object-fit:cover}
-.post div{padding:10px 12px 12px;font-size:14px}.post b{display:block;font-size:20px;font-variant-numeric:tabular-nums}
-.post small{display:block;color:var(--muted)}
-.fmt{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
-.pk{display:grid;gap:10px}
-.pkg{display:flex;gap:16px;justify-content:space-between;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
-.pkg b{display:block}.pkg p{margin:2px 0 0;color:var(--muted);font-size:15px}.pkg span{flex:none;font-weight:600;color:var(--gold);white-space:nowrap}
-.no{margin-top:14px;font-size:15px;color:var(--muted)}
-.contact{margin-top:52px;background:var(--gold);color:var(--ink);border-radius:16px;padding:22px}
-.contact h2{margin:0;color:var(--ink)}.contact p{margin:6px 0 0;font-size:18px}.contact a{font-weight:700}
-.foot{margin-top:28px;font-size:13px;color:var(--muted)}
-@media (max-width:720px){.stats{grid-template-columns:1fr 1fr}.cols,.fmt{grid-template-columns:1fr}.posts{grid-template-columns:1fr 1fr}.hero{align-items:flex-start}.avatar{width:72px;height:72px}.pkg{flex-direction:column;gap:4px}}
-@media print{body{-webkit-print-color-adjust:exact;print-color-adjust:exact}.post,.card,.stat,.pkg{break-inside:avoid}}
+:root{--bg:#09090b;--bg3:#17171b;--line:rgba(236,232,225,.11);--line2:rgba(236,232,225,.24);--text:#ece8e1;--soft:#c9c4cc;
+--muted:#8f8a93;--dim:#66616b;--violet:#ad96ff;--violet2:#7c5ff0;--head:Goodmountain,Georgia,serif;
+--mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;--mark:Goodmountain,Georgia,serif}
+body{background:var(--bg) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 .045 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");color:var(--text);font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased}
+h1,h2,h3,blockquote{font-family:var(--head);font-weight:400;text-wrap:balance}
+.wrap{max-width:1240px;margin:0 auto;padding:0 40px}
+.k{display:block;font:500 11px/1.4 var(--mono);letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+.k em{font-style:normal;color:var(--violet)}
+.u{color:var(--violet);font-style:normal}
+.art{position:absolute;inset:0;z-index:0;width:100%;height:100%;object-fit:cover}
+.cover>.wrap,.band>.wrap,.close>.wrap{position:relative;z-index:2}
+
+/* cover */
+.cover{position:relative;isolation:isolate;overflow:hidden;min-height:780px;display:flex}
+.cover .art{object-position:64% 45%}
+.cover::before{content:"";position:absolute;inset:0;z-index:1;background:url(../brand/art/fade-cover-h.png) 0 0/100% 100% no-repeat,url(../brand/art/fade-cover-v.png) 0 0/100% 100% no-repeat}
+.cover>.wrap{display:flex;flex-direction:column;width:100%}
+.mast{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:26px 0 20px;border-bottom:1px solid var(--line2)}
+.mark{font:400 24px/1 var(--mark);color:var(--text);text-decoration:none;letter-spacing:.01em}
+.who{display:flex;align-items:center;gap:10px;text-decoration:none}
+.who img{width:30px;height:30px;border-radius:50%}
+.cover-body{margin-top:auto;padding:200px 0 64px}
+.cover-num{display:block;font:400 clamp(96px,34vw,460px)/.86 var(--head);letter-spacing:-.005em;
+ margin:.12em 0 0 -.05em;white-space:nowrap;text-shadow:0 0 120px rgba(9,9,11,.55)}
+.cover-num .u{text-shadow:none;margin-left:.04em}
+.cover-cap{display:flex;justify-content:space-between;gap:16px;margin:30px 0 0;padding:16px 0 0;border-top:1px solid var(--line2)}
+.cover-foot{display:grid;grid-template-columns:7fr 5fr;gap:24px 64px;align-items:end;margin-top:56px}
+.cover h1{font-size:clamp(34px,4.6vw,62px);line-height:1.04;letter-spacing:-.005em}
+.cover h1 i{color:var(--violet);font-style:normal}
+.stand{font-size:18px;line-height:1.55;color:var(--soft);max-width:44ch;margin:0}
+
+/* reach */
+.reach{padding:8px 0 88px;border-bottom:1px solid var(--line)}
+.reach>.k{margin-bottom:18px}
+
+/* sections */
+.sec{padding-top:112px}
+.shead{display:grid;grid-template-columns:3fr 9fr;gap:20px 64px;margin-bottom:56px}
+.shead .k{padding-top:16px;border-top:1px solid var(--violet2);align-self:start}
+.shead h2{font-size:clamp(44px,6.2vw,88px);line-height:.94;letter-spacing:-.005em}
+.shead p{grid-column:2;margin:0;color:var(--muted);font-size:17px;max-width:58ch}
+
+/* audience */
+.aud{display:grid;grid-template-columns:5fr 7fr;gap:64px}
+.pull .big{display:block;font:400 clamp(88px,11vw,150px)/.85 var(--head);letter-spacing:-.005em}
+.pull p{font:400 22px/1.4 var(--body);margin:26px 0 0;max-width:20ch}
+.pull small{display:block;margin-top:26px;padding-top:18px;border-top:1px solid var(--line);color:var(--muted);font-size:15px;max-width:34ch}
+.demo{display:grid;grid-template-columns:1fr 1fr;gap:48px 48px;align-content:start}
+.demo .full{grid-column:1/-1}
+.demo h3{font:500 11px/1 var(--mono);letter-spacing:.18em;text-transform:uppercase;color:var(--muted);padding-bottom:14px;border-bottom:1px solid var(--line2)}
+.bar{display:grid;grid-template-columns:8.6em 1fr 3.4em;gap:16px;align-items:center;padding:10px 0;border-bottom:1px solid var(--line);font-size:15px;color:var(--soft)}
+.bar i{display:block;height:2px;background:var(--line)}
+.bar i em{display:block;height:100%;background:var(--dim)}
+.bar.hi{color:var(--text)}.bar.hi i em{background:var(--violet)}
+.bar span:last-child{text-align:right;font:500 13px var(--mono);font-variant-numeric:tabular-nums}
+
+/* engagement band */
+.band{position:relative;isolation:isolate;overflow:hidden;margin-top:128px;min-height:620px;display:flex;align-items:flex-end}
+.band .art{object-position:50% 46%}
+.band::before{content:"";position:absolute;inset:0;z-index:1;background:url(../brand/art/fade-band-v.png) 0 0/100% 100% no-repeat,url(../brand/art/fade-band-h.png) 0 0/100% 100% no-repeat}
+.band>.wrap{width:100%;padding-top:96px;padding-bottom:40px}
+.band .shead{margin-bottom:28px}
+.band blockquote{margin:0;font:400 clamp(48px,7vw,104px)/.95 var(--head);letter-spacing:-.005em;max-width:15ch}
+.figs{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line2)}
+.figs>div{padding:26px 28px 6px 0}
+.figs>div+div{padding-left:28px;border-left:1px solid var(--line)}
+.figs b{display:block;font:400 60px/1 var(--head);letter-spacing:-.005em}
+.figs>div>span{display:block;margin-top:12px;color:var(--muted);font-size:15px}
+.gcell p{margin:14px 0 0;font:400 18px/1.45 var(--body);color:var(--soft);max-width:22ch}
+.medk{margin-top:64px;padding-bottom:16px}
+
+/* top posts */
+.posts{display:grid;grid-template-columns:repeat(3,1fr);gap:48px 28px}
+.post{display:flex;flex-direction:column;text-decoration:none;color:inherit}
+.post .img{position:relative;overflow:hidden;background:var(--bg3)}
+.post img{width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;object-position:top;transition:transform .7s ease}
+.post:hover img{transform:scale(1.025)}
+.cap{display:grid;grid-template-columns:2.6em 1fr;gap:2px 12px;margin-top:16px;padding-top:16px;border-top:1px solid var(--line2)}
+.cap .r{font:500 12px/1 var(--mono);color:var(--violet);padding-top:10px;grid-row:span 3}
+.cap b{font:400 30px/1 var(--head);letter-spacing:-.005em}
+.cap .t{margin-top:6px;font-size:15px;color:var(--text)}
+.cap small{font:400 12px/1.6 var(--mono);color:var(--muted);letter-spacing:.03em}
+.post.lead{grid-column:span 2;grid-row:span 2}
+.post.lead .img{flex:1;min-height:0}
+.post.lead img{position:absolute;inset:0;height:100%;aspect-ratio:auto}
+.post.lead .cap b{font-size:52px}
+.post.lead .cap .t{font-size:18px}
+
+/* partnerships */
+.pk{border-top:1px solid var(--line2)}
+.pkg{display:grid;grid-template-columns:3fr 4fr 5fr auto;gap:24px 40px;align-items:baseline;padding:30px 0;border-bottom:1px solid var(--line)}
+.pkg .n{font:500 12px var(--mono);color:var(--violet);letter-spacing:.1em}
+.pkg h3{font-size:28px;line-height:1.02;letter-spacing:-.005em}
+.pkg p{margin:0;color:var(--muted)}
+.pkg .price{font:500 11px var(--mono);letter-spacing:.18em;text-transform:uppercase;white-space:nowrap}
+.no{display:grid;grid-template-columns:3fr 9fr;gap:20px 64px;margin-top:64px}
+.no .k{padding-top:6px}
+.no p{margin:0;font:400 21px/1.45 var(--body);max-width:36ch;padding-left:28px;border-left:1px solid var(--violet2)}
+
+/* close */
+.close{position:relative;isolation:isolate;overflow:hidden;margin-top:136px;min-height:600px;display:flex;align-items:center}
+.close .art{object-position:22% 30%}
+.close::before{content:"";position:absolute;inset:0;z-index:1;background:url(../brand/art/fade-close-h.png) 0 0/100% 100% no-repeat,url(../brand/art/fade-close-v.png) 0 0/100% 100% no-repeat}
+.close>.wrap{width:100%;display:grid;grid-template-columns:5fr 7fr}
+.close-body{grid-column:2;padding:96px 0}
+.close h2{font-size:clamp(64px,10.5vw,156px);line-height:.86;letter-spacing:-.005em;margin:24px 0 0}
+.close p{font-size:21px;margin:30px 0 0;color:var(--soft)}
+.close p a{color:var(--text);text-decoration:none;border-bottom:1px solid var(--violet)}
+.dl{display:inline-block;margin-top:40px;padding:16px 22px;border:1px solid var(--line2);font:500 11px/1 var(--mono);letter-spacing:.18em;text-transform:uppercase;color:var(--text);text-decoration:none;transition:border-color .2s}
+.dl:hover{border-color:var(--violet)}
+.foot{display:grid;grid-template-columns:3fr 9fr;gap:12px 64px;padding-top:36px;padding-bottom:64px;border-top:1px solid var(--line);font:400 12px/1.75 var(--mono);color:var(--dim)}
+.foot p{margin:0;max-width:96ch}.foot a{color:var(--muted)}
+
+@media (max-width:960px){
+ .wrap{padding:0 28px}
+ .aud,.shead,.no,.cover-foot{grid-template-columns:1fr}
+ .shead p{grid-column:1}.shead .k{max-width:240px}
+ .pkg{grid-template-columns:3em 1fr auto}.pkg p{grid-column:2/-1}
+ .close>.wrap{grid-template-columns:1fr}.close-body{grid-column:1}
+ .close::before{background:url(../brand/art/fade-close-m.png) 0 0/100% 100% no-repeat}
+ .foot{grid-template-columns:1fr}
+}
+@media (max-width:640px){
+ .wrap{padding:0 16px}
+ .mast .k{display:none}.mark{font-size:20px}.d{display:none}
+ .cover{min-height:660px}.cover .art{object-position:72% 40%}
+ .cover::before{background:url(../brand/art/fade-cover-m.png) 0 0/100% 100% no-repeat}
+ .cover-body{padding:150px 0 44px}.stand{font-size:17px}.cover-foot{margin-top:36px}.cover-cap .k+.k{display:none}
+ .sec{padding-top:88px}.shead{margin-bottom:40px}
+ .demo{grid-template-columns:1fr;gap:40px}
+ .pull p{font-size:19px}
+ .band{min-height:520px;margin-top:96px}
+ .figs,.posts{grid-template-columns:1fr 1fr}
+ .figs>div{padding:20px 12px 4px 0}.figs>div+div{padding-left:12px}
+ .figs>div:nth-child(3){grid-column:1/-1;border-left:0;padding-left:0;border-top:1px solid var(--line)}
+ .figs b{font-size:38px}
+ .posts{gap:36px 14px}
+ .post.lead{grid-row:auto}.post.lead img{position:static;aspect-ratio:4/5;height:auto}
+ .cap{grid-template-columns:1fr}.cap .r{grid-row:auto;padding:0 0 6px}
+ .cap b{font-size:22px}.post.lead .cap b{font-size:36px}
+ .pkg{grid-template-columns:1fr;gap:10px;padding:26px 0}.pkg p{grid-column:1}
+ .pkg h3{font-size:30px}
+ .no p{font-size:18px;padding-left:20px}
+ .close{min-height:0;margin-top:96px}.close-body{padding:220px 0 64px}
+ .close .art{object-position:20% 20%}
+}
+@media print{body{-webkit-print-color-adjust:exact;print-color-adjust:exact}.post,.pkg,.figs,.bar{break-inside:avoid}}
 </style></head>
-<body><main>
-<header class="hero"><img class="avatar" src="../brand/avatar.jpg" alt="" width="96" height="96">
-<div><h1>WoW Forever Guide</h1><p><b>@wowforeverguide</b> on Instagram · media kit · 16 November 2026</p></div></header>
-<p class="lede">The field guide for World of Warcraft: Forever, Blizzard's 2026 return to the original world. Every class, race, zone and change, made to be saved and sent to the friend you play with.</p>
+<body>
+<section class="cover"><img class="art" src="../brand/art/hero.jpg" alt="" width="2400" height="1000">
+<div class="wrap">
+<header class="mast"><a class="mark" href="../">WoW Forever Guide</a><span class="k">Media kit · 16 November 2026</span>
+<a class="who" href="https://www.instagram.com/wowforeverguide/"><img src="../brand/avatar.jpg" alt="" width="30" height="30"><span class="k">@wowforeverguide</span></a></header>
+<div class="cover-body"><span class="k"><em>Media kit</em> · @wowforeverguide on Instagram</span>
+<b class="cover-num" style="font-size:clamp(80px,31.6vw,427px)">14.9<span class="u">M</span></b>
+<p class="cover-cap"><span class="k"><em>01</em> · Views in the last 30 days</span><span class="k">Instagram insights · 16 November 2026</span></p>
+<div class="cover-foot"><h1>The field guide for World of Warcraft: <i>Forever.</i></h1>
+<p class="stand">Blizzard's 2026 return to the original world. Every class, race, zone and change, made to be saved and sent to the friend you play with.</p></div></div>
+</div></section>
 
-<div class="stats">
-<div class="stat"><b>14.1M</b><span>views, last 30 days</span></div>
-<div class="stat"><b>2.1M</b><span>accounts reached, last 30 days</span></div>
-<div class="stat"><b>28.4k</b><span>followers, +26.2k in 30 days</span></div>
-<div class="stat"><b>311k</b><span>shares, last 30 days</span></div>
-</div>
+<main>
+<section class="wrap"><div class="reach"><span class="k"><em>01</em> · Reach</span>
+<div class="figs"><div><b>2.2<span class="u">M</span></b><span>accounts reached, last 30 days</span></div>
+<div><b>29.4<span class="u">k</span></b><span>followers, +27.6k in 30 days</span></div>
+<div><b>328<span class="u">k</span></b><span>shares, last 30 days</span></div></div></div></section>
 
-<h2>Who follows</h2>
-<p class="note">88% are 25 to 44: the players who were there in 2004 and now have the jobs. 90% of those who give a gender are men.</p>
-<div class="cols">
-<div class="card"><h3>Age</h3><div class="bar"><span>18 to 24</span><i><em style="width:5.0%"></em></i><span>5%</span></div><div class="bar"><span>25 to 34</span><i><em style="width:54.6%"></em></i><span>55%</span></div><div class="bar"><span>35 to 44</span><i><em style="width:33.8%"></em></i><span>34%</span></div><div class="bar"><span>45 to 54</span><i><em style="width:4.8%"></em></i><span>5%</span></div><div class="bar"><span>55 and over</span><i><em style="width:1.8%"></em></i><span>2%</span></div></div>
-<div class="card"><h3>Gender</h3><div class="bar"><span>Men</span><i><em style="width:77.0%"></em></i><span>77%</span></div><div class="bar"><span>Women</span><i><em style="width:8.3%"></em></i><span>8%</span></div><div class="bar"><span>Not given</span><i><em style="width:14.8%"></em></i><span>15%</span></div></div>
-<div class="card"><h3>Top countries</h3><div class="bar"><span>United States</span><i><em style="width:28.9%"></em></i><span>29%</span></div><div class="bar"><span>Germany</span><i><em style="width:9.4%"></em></i><span>9%</span></div><div class="bar"><span>France</span><i><em style="width:5.7%"></em></i><span>6%</span></div><div class="bar"><span>United Kingdom</span><i><em style="width:5.0%"></em></i><span>5%</span></div><div class="bar"><span>Brazil</span><i><em style="width:5.0%"></em></i><span>5%</span></div><div class="bar"><span>Canada</span><i><em style="width:4.0%"></em></i><span>4%</span></div></div>
-</div>
+<section class="wrap sec">
+<div class="shead"><span class="k"><em>02</em> · Audience</span><h2>Who follows</h2></div>
+<div class="aud">
+<div class="pull"><b class="big">88<span class="u">%</span></b><p>are 25 to 44: the players who were there in 2004 and now have the jobs.</p>
+<small>90% of those who give a gender are men.</small></div>
+<div class="demo">
+<div class="full"><h3>Age</h3><div class="bar"><span>18 to 24</span><i><em style="width:5.0%"></em></i><span>5%</span></div><div class="bar hi"><span>25 to 34</span><i><em style="width:54.7%"></em></i><span>55%</span></div><div class="bar hi"><span>35 to 44</span><i><em style="width:33.7%"></em></i><span>34%</span></div><div class="bar"><span>45 to 54</span><i><em style="width:4.8%"></em></i><span>5%</span></div><div class="bar"><span>55 and over</span><i><em style="width:1.8%"></em></i><span>2%</span></div></div>
+<div><h3>Gender</h3><div class="bar hi"><span>Men</span><i><em style="width:77.0%"></em></i><span>77%</span></div><div class="bar"><span>Women</span><i><em style="width:8.3%"></em></i><span>8%</span></div><div class="bar"><span>Not given</span><i><em style="width:14.7%"></em></i><span>15%</span></div></div>
+<div><h3>Top countries</h3><div class="bar hi"><span>United States</span><i><em style="width:28.8%"></em></i><span>29%</span></div><div class="bar"><span>Germany</span><i><em style="width:9.4%"></em></i><span>9%</span></div><div class="bar"><span>France</span><i><em style="width:5.7%"></em></i><span>6%</span></div><div class="bar"><span>United Kingdom</span><i><em style="width:5.1%"></em></i><span>5%</span></div><div class="bar"><span>Brazil</span><i><em style="width:5.1%"></em></i><span>5%</span></div><div class="bar"><span>Canada</span><i><em style="width:4.0%"></em></i><span>4%</span></div></div>
+</div></div></section>
 
-<h2>What people do with it</h2>
-<p class="note">They keep it and pass it on: 22 shares per 1,000 views and 108k saves in 30 days. 1,029 followers on 18 October, 28,395 on 16 November 2026.</p>
-<div class="fmt"><div class="stat"><b>95.9k</b><span>median views per single image, 4 posts</span></div><div class="stat"><b>77.1k</b><span>median views per carousel, 25 posts</span></div><div class="stat"><b>13.8k</b><span>median views per reel, 58 posts</span></div></div>
+<section class="band"><img class="art" src="../brand/art/band.jpg" alt="" width="2400" height="1000" loading="lazy">
+<div class="wrap"><div class="shead"><span class="k"><em>03</em> · Engagement</span><h2>What people do with it</h2></div>
+<blockquote>They keep it and pass it on.</blockquote></div></section>
+<section class="wrap">
+<div class="figs"><div><b>22</b><span>shares per 1,000 views</span></div>
+<div><b>112<span class="u">k</span></b><span>saves in 30 days</span></div>
+<div class="gcell"><span class="k">Growth</span><p>1,029 followers on 18 October, 29,375 on 16 November 2026.</p></div></div>
+<span class="k medk">Median views per post · last 14 days</span>
+<div class="figs"><div><b>101<span class="u">k</span></b><span>median views per single image, 4 posts</span></div><div><b>84.2<span class="u">k</span></b><span>median views per carousel, 26 posts</span></div><div><b>13.9<span class="u">k</span></b><span>median views per reel, 57 posts</span></div></div></section>
 
-<h2>Top posts</h2>
-<p class="note">Lifetime numbers from Instagram.</p>
-<div class="posts"><a class="post" href="https://www.instagram.com/p/DfYyw0DDhu1/"><img src="../brand/thumbs/ig246.jpg" alt="" loading="lazy" width="600" height="750"><div><b>1.2M views</b>every horde zone, 1 to 60<small>12.1k shares · 18.7k saves</small></div></a><a class="post" href="https://www.instagram.com/p/DfLox9uu4rD/"><img src="../brand/thumbs/ig123.jpg" alt="" loading="lazy" width="600" height="750"><div><b>546k views</b>mum can you buy this / cash or card<small>46.6k shares · 1.9k saves</small></div></a><a class="post" href="https://www.instagram.com/p/DfFXboplmC-/"><img src="../brand/thumbs/ig192.jpg" alt="" loading="lazy" width="600" height="750"><div><b>409k views</b>every rotation in three letters<small>4.6k shares · 6.6k saves</small></div></a><a class="post" href="https://www.instagram.com/p/Dff5tB0jsnK/"><img src="../brand/thumbs/ig257.jpg" alt="" loading="lazy" width="600" height="750"><div><b>563k views</b>the rare pets everyone is camping<small>13.7k shares · 11.9k saves</small></div></a><a class="post" href="https://www.instagram.com/p/DfaEBuqFryJ/"><img src="../brand/thumbs/ig245.jpg" alt="" loading="lazy" width="600" height="750"><div><b>551k views</b>every alliance zone, 1 to 60<small>7.2k shares · 11.1k saves</small></div></a><a class="post" href="https://www.instagram.com/p/DffULKDlo_z/"><img src="../brand/thumbs/ig262.jpg" alt="" loading="lazy" width="600" height="750"><div><b>137k views</b>running deadmines tonight<small>2.9k shares · 1.4k saves</small></div></a></div>
+<section class="wrap sec">
+<div class="shead"><span class="k"><em>04</em> · The work</span><h2>Top posts</h2><p>Lifetime numbers from Instagram.</p></div>
+<div class="posts"><a class="post lead" href="https://www.instagram.com/p/DfYyw0DDhu1/"><div class="img"><img src="../brand/thumbs/ig246.jpg" alt="every horde zone, 1 to 60" loading="lazy" width="600" height="750"></div><div class="cap"><span class="r">01</span><b>1.3<span class="u">M</span> views</b><span class="t">every horde zone, 1 to 60</span><small>12.6k shares · 19.4k saves</small></div></a><a class="post" href="https://www.instagram.com/p/DfLox9uu4rD/"><div class="img"><img src="../brand/thumbs/ig123.jpg" alt="mum can you buy this / cash or card" loading="lazy" width="600" height="750"></div><div class="cap"><span class="r">02</span><b>546<span class="u">k</span> views</b><span class="t">mum can you buy this / cash or card</span><small>46.6k shares · 1.9k saves</small></div></a><a class="post" href="https://www.instagram.com/p/DfFXboplmC-/"><div class="img"><img src="../brand/thumbs/ig192.jpg" alt="every rotation in three letters" loading="lazy" width="600" height="750"></div><div class="cap"><span class="r">03</span><b>409<span class="u">k</span> views</b><span class="t">every rotation in three letters</span><small>4.6k shares · 6.6k saves</small></div></a><a class="post" href="https://www.instagram.com/p/Dff5tB0jsnK/"><div class="img"><img src="../brand/thumbs/ig257.jpg" alt="the rare pets everyone is camping" loading="lazy" width="600" height="750"></div><div class="cap"><span class="r">04</span><b>589<span class="u">k</span> views</b><span class="t">the rare pets everyone is camping</span><small>14.2k shares · 12.4k saves</small></div></a><a class="post" href="https://www.instagram.com/p/DfaEBuqFryJ/"><div class="img"><img src="../brand/thumbs/ig245.jpg" alt="every alliance zone, 1 to 60" loading="lazy" width="600" height="750"></div><div class="cap"><span class="r">05</span><b>604<span class="u">k</span> views</b><span class="t">every alliance zone, 1 to 60</span><small>7.6k shares · 12.0k saves</small></div></a><a class="post" href="https://www.instagram.com/p/DffULKDlo_z/"><div class="img"><img src="../brand/thumbs/ig262.jpg" alt="running deadmines tonight" loading="lazy" width="600" height="750"></div><div class="cap"><span class="r">06</span><b>141<span class="u">k</span> views</b><span class="t">running deadmines tonight</span><small>2.9k shares · 1.4k saves</small></div></a></div></section>
 
-<h2>Ways to work together</h2>
-<p class="note">Everything is made in the account's own voice and format, so it reads like the posts people already save.</p>
-<div class="pk"><div class="pkg"><div><b>Sponsored carousel</b><p>A guide or meme carousel built around your product, in the account&#x27;s own format. The format behind every top post.</p></div><span>on request</span></div><div class="pkg"><div><b>Single-image meme</b><p>One image, made to be shared. The format with the most shares per view on the account.</p></div><span>on request</span></div><div class="pkg"><div><b>Reel</b><p>A 15 to 40 second reel: a class tip, a news beat or a moment from our own play, with your product in it.</p></div><span>on request</span></div><div class="pkg"><div><b>Story set</b><p>Three to five stories with a link sticker, for a launch, a code or a sale.</p></div><span>on request</span></div><div class="pkg"><div><b>Launch bundle</b><p>Carousel, reel and story set around one date: a raid opening, a patch, a holiday sale.</p></div><span>on request</span></div></div>
-<p class="no"><b>What we don't take:</b> Gold sellers, boosting and account services, gambling, crypto, or anything that breaks Blizzard&#x27;s terms. The audience trusts the account because of that line.</p>
+<section class="wrap sec">
+<div class="shead"><span class="k"><em>05</em> · Partnerships</span><h2>Ways to work together</h2>
+<p>Everything is made in the account's own voice and format, so it reads like the posts people already save.</p></div>
+<div class="pk"><div class="pkg"><span class="n">01</span><h3>Sponsored carousel</h3><p>A guide or meme carousel built around your product, in the account&#x27;s own format. The format behind every top post.</p><span class="price">on request</span></div><div class="pkg"><span class="n">02</span><h3>Single-image meme</h3><p>One image, made to be shared. The format with the most shares per view on the account.</p><span class="price">on request</span></div><div class="pkg"><span class="n">03</span><h3>Reel</h3><p>A 15 to 40 second reel: a class tip, a news beat or a moment from our own play, with your product in it.</p><span class="price">on request</span></div><div class="pkg"><span class="n">04</span><h3>Story set</h3><p>Three to five stories with a link sticker, for a launch, a code or a sale.</p><span class="price">on request</span></div><div class="pkg"><span class="n">05</span><h3>Launch bundle</h3><p>Carousel, reel and story set around one date: a raid opening, a patch, a holiday sale.</p><span class="price">on request</span></div></div>
+<div class="no"><span class="k">What we don't take</span><p>Gold sellers, boosting and account services, gambling, crypto, or anything that breaks Blizzard&#x27;s terms. The audience trusts the account because of that line.</p></div></section>
 
-<section class="contact"><h2>Get in touch</h2><p>DM <a href="https://ig.me/m/wowforeverguide">@wowforeverguide</a> on Instagram.</p></section>
-<p class="foot">Figures come from Instagram's own insights for @wowforeverguide, pulled 16 November 2026. Audience breakdowns cover the followers Instagram can classify. Medians cover the last 14 days. <a href="wowforeverguide-media-kit.pdf">Download as PDF</a>.</p>
+<section class="close"><img class="art" src="../brand/art/close.jpg" alt="" width="2400" height="1000" loading="lazy">
+<div class="wrap"><div class="close-body"><span class="k"><em>06</em> · Contact</span><h2>Get in touch.</h2><p>DM <a href="https://ig.me/m/wowforeverguide">@wowforeverguide</a> on Instagram.</p>
+<a class="dl" href="wowforeverguide-media-kit.pdf">Download the PDF</a></div></div></section>
+
+<footer class="wrap foot"><span>@wowforeverguide · 16 November 2026</span>
+<p>Figures come from Instagram's own insights for @wowforeverguide, pulled 16 November 2026. Audience breakdowns cover the followers Instagram can classify. Medians cover the last 14 days. Cinematic stills: Blizzard Entertainment, World of Warcraft: Forever press kit. <a href="wowforeverguide-media-kit.pdf">Download as PDF</a>.</p></footer>
 </main></body></html>
