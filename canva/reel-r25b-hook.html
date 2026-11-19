@@ -1,0 +1,25 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>r25b overlays: class hook and class tag</title>
+<!-- Overlays for r25b, the paladin re-cut. Render #hook and #tag as transparent 1080x1920 PNGs
+     and lay them over the footage: #hook on 0-2.5 s, #tag from 2.5 s to the end.
+     Hook shape: "the fact that stings, about your thing" (HOOKS.md, r138 12.4x). -->
+<style>
+@font-face{font-family:LifeCraft;src:url(../assets/fonts/LifeCraft.woff2) format("woff2")}
+html,body{margin:0;background:transparent}
+.layer{position:relative;width:1080px;height:1920px;overflow:hidden}
+/* covers the old caption baked into the footage (about y 1060-1220) */
+#hook .shade{position:absolute;left:0;right:0;top:880px;bottom:0;background:linear-gradient(to bottom,rgba(11,9,7,0) 0,rgba(11,9,7,.96) 150px,#0b0907 260px)}
+#hook .cls{position:absolute;left:0;right:0;top:960px;text-align:center;font:400 250px/0.9 LifeCraft,serif;color:#f5c84c;letter-spacing:.01em;
+  text-shadow:0 0 0 #000,0 6px 0 #6b4a08,0 14px 40px rgba(0,0,0,.9)}
+#hook .line{position:absolute;left:70px;right:70px;top:1215px;text-align:center;font:400 92px/1.0 LifeCraft,serif;color:#fff8ea;text-shadow:0 4px 18px rgba(0,0,0,.9)}
+#hook .line em{font-style:normal;color:#f5c84c}
+#hook .handle,#tag .handle{position:absolute;left:0;right:0;top:1500px;text-align:center;font:400 30px/1 LifeCraft,serif;color:#9a8f7c}
+#tag .chip{position:absolute;left:44px;top:200px;padding:16px 26px 10px;background:#f5c84c;color:#1d1606;font:400 64px/1 LifeCraft,serif;border-radius:8px;box-shadow:0 8px 24px rgba(0,0,0,.6)}
+</style></head>
+<body>
+<div class="layer" id="hook"><div class="shade"></div>
+  <div class="cls">PALADIN</div>
+  <div class="line">Judgment doesn't <em>eat your seal</em> anymore.</div>
+</div>
+<div class="layer" id="tag"><span class="chip">PALADIN</span></div>
+</body></html>
